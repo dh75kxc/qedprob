@@ -1,1 +1,43 @@
-이러네
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>길거리 수학</title>
+        <script src="./js/main2.js" defer></script>
+        <style>
+            #outer {
+                display: flex;
+                width: 95%;
+                margin-top:1%;
+            }
+            .problem {
+                text-align:left;
+                margin-left:4%;
+                
+            }
+            .problem img {
+                width:auto; 
+                height:95%;
+            }
+            .michin {
+                text-align: end;
+                margin-left: 54%;
+            }
+            #timer {
+                width:20%;
+                font-size:250%;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <div class="problem">
+                <img src="assets/sample.png" />
+            </div>
+            <div id="ViewTimer" class="michin">
+                <b id="timer">05:00</b>
+            </div>
+        </div>
+    </body>
+</html>
