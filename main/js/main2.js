@@ -2,27 +2,28 @@ const receivedData = location.href.split('?')[1];
 const data1 = receivedData.split(',')[0];
 const data2 = receivedData.split(',')[1];
 
-image = [[[],['001','002'],[],[]],
+let image = [[[],['001','002'],[],[]],
         [[],[],[],[]],
         [[],[],[],[]],
         [[],[],[],[]],
         [[],[],[],[]]
-        [[],[],[],[]]]
+        [[],[],[],[]]];
 
-answ = [[[],['001','002'],[],[]],
+let answ = [[[],[121,180],[],[]],
         [[],[],[],[]],
         [[],[],[],[]],
         [[],[],[],[]],
         [[],[],[],[]]
-        [[],[],[],[]]]
+        [[],[],[],[]]];
 
-const prob = image[data1][data2]
+const prob = image[data1][data2];
 console.log(prob);
 let randnum = Math.floor(Math.random() * prob.length);
 const todayProblem = prob[randnum];
 document.querySelector('.problem img').setAttribute('src', 'assets/'+data1+'/'+data2+'/'+todayProblem+'.png');
 
 let ans = answ[data1][data2][randnum];
+let temp = 1234567890;
 
 let Byeongsin = 300;
 function msg_time() {
@@ -35,3 +36,15 @@ function msg_time() {
     }
 }
 window.onload = function TimerStart(){tid=setInterval('msg_time()',1000)};
+
+function inputValueChange(){
+    var inputValue = document.getElementById('number').value;
+    temp=inputValue;
+    console.log(temp);
+    document.getElementById('number').value = null;
+    if (ans==temp) {
+        console.log("정답코드 실행 예정");
+    } else {
+        console.log("오답코드 실행 예정");
+    }
+}
