@@ -9,10 +9,20 @@ image = [[[],['001','002'],[],[]],
         [[],[],[],[]]
         [[],[],[],[]]]
 
+answ = [[[],['001','002'],[],[]],
+        [[],[],[],[]],
+        [[],[],[],[]],
+        [[],[],[],[]],
+        [[],[],[],[]]
+        [[],[],[],[]]]
+
 const prob = image[data1][data2]
 console.log(prob);
-const todayProblem = prob[Math.floor(Math.random() * prob.length)];
+let randnum = Math.floor(Math.random() * prob.length);
+const todayProblem = prob[randnum];
 document.querySelector('.problem img').setAttribute('src', 'assets/'+data1+'/'+data2+'/'+todayProblem+'.png');
+
+let ans = answ[data1][data2][randnum];
 
 let Byeongsin = 300;
 function msg_time() {

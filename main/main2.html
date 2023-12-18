@@ -4,6 +4,13 @@
         <meta charset="UTF-8">
         <title>길거리 수학</title>
         <script src="./js/main2.js" defer></script>
+        <script lang="javascript">
+            function inputValueChange(){
+                var inputValue = document.getElementById('number').value;
+                console.log(inputValue)
+                document.getElementById('number').value = null;
+            }
+        </script>
         <style>
             #outer {
                 display: flex;
@@ -29,6 +36,19 @@
                 font-size:250%;
                 color:red;
             }
+            input { 
+                width: 12%; 
+                padding: 10px 20px; 
+                text-align: bottom; 
+                margin-top: auto;
+                margin-left: 5%;
+                box-sizing: border-box; 
+                border: solid 4px tomato;
+                font-size:180%;
+            }
+            input:focus{
+                border: solid 4px blueviolet;
+            }
         </style>
     </head>
     <body>
@@ -40,5 +60,6 @@
                 <b id="timer">05:00</b>
             </div>
         </div>
+        <input id="number" type="number" height="20" name="answer" onchange="inputValueChange()">
     </body>
 </html>
