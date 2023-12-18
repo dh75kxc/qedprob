@@ -17,7 +17,6 @@ let answ = [[[],[121,180],[],[]],
         [[],[],[],[]]];
 
 const prob = image[data1][data2];
-console.log(prob);
 let randnum = Math.floor(Math.random() * prob.length);
 const todayProblem = prob[randnum];
 document.querySelector('.problem img').setAttribute('src', 'assets/'+data1+'/'+data2+'/'+todayProblem+'.png');
