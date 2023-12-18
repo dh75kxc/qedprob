@@ -24,4 +24,4 @@ function msg_time() {
         alert("종료");
     }
 }
-window.onload = () => {setInterval('msg_time()',1000)};
+window.onload = function TimerStart(){tid=setInterval('msg_time()',1000)};
