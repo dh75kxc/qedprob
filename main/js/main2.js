@@ -9,20 +9,20 @@ window.onload = function () {
 }
 
 function notify() {
-    if (Notification.permission !== 'granted') {
-        alert('notification is disabled');
-    }
-    else {
-        var notification = new Notification('Notification title', {
-            icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-            body: 'Notification text',
-        });
-
-        notification.onclick = function () {
-            window.open('http://google.com');
-        };
-    }
-}
+            if (Notification.permission !== 'granted') {
+                alert('notification is disabled');
+            }
+            else {
+                var notification = new Notification('Notification title', {
+                    icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+                    body: 'Notification text',
+                });
+ 
+                notification.onclick = function () {
+                    window.open('http://google.com');
+                };
+            }
+        }
 
 let image = [[[],['001','002','003','004','005'],['001','002','003'],['001']],
         [[],[],[],[]],
@@ -57,6 +57,10 @@ function msg_time() {
     }
 }
 window.onload = function TimerStart(){tid=setInterval('msg_time()',1000)};
+
+setTimeout(function () {
+    notify();
+}, 5000);
 
 function inputValueChange(){
     var inputValue = document.getElementById('number').value;
