@@ -2,12 +2,6 @@ const receivedData = location.href.split('?')[1];
 const data1 = receivedData.split(',')[0];
 const data2 = receivedData.split(',')[1];
 
-window.onload = function () {
-    if (window.Notification) {
-        Notification.requestPermission();
-    }
-}
-
 function notify() {
             if (Notification.permission !== 'granted') {
                 alert('notification is disabled');
@@ -24,19 +18,29 @@ function notify() {
             }
         }
 
-let image = [[[],['001','002','003','004','005'],['001','002','003'],['001']],
-        [[],[],[],[]],
-        [[],[],[],[]],
-        [[],[],[],[]],
-        [[],[],[],[]]
-        [[],[],[],[]]];
+window.onload = function () {
+    if (window.Notification) {
+        Notification.requestPermission();
+    }
 
-let answ = [[[],[121,180,,,],[8,400,],[]],
-        [[],[],[],[]],
-        [[],[],[],[]],
-        [[],[],[],[]],
-        [[],[],[],[]]
-        [[],[],[],[]]];
+    setTimeout(function () {
+        notify();
+    }, 5000);
+}
+
+let image = [[['001'],['001','002','003','004','005'],['001','002'],['001']],
+            [[],[],[],[]],
+            [[],[],[],[]],
+            [[],[],[],[]],
+            [[],[],[],[]]
+            [[],[],[],[]]];
+
+let answ = [[[1],[121,180,14,,],[8,75],[,400]],
+            [[],[],[],[]],
+            [[],[],[],[]],
+            [[],[],[],[]],
+            [[],[],[],[]]
+            [[],[],[],[]]];
 
 const prob = image[data1][data2];
 let randnum = Math.floor(Math.random() * prob.length);
@@ -57,10 +61,6 @@ function msg_time() {
     }
 }
 window.onload = function TimerStart(){tid=setInterval('msg_time()',1000)};
-
-setTimeout(function () {
-    notify();
-}, 5000);
 
 function inputValueChange(){
     var inputValue = document.getElementById('number').value;
