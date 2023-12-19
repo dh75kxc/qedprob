@@ -9,7 +9,7 @@ let image = [[[],['001','002','003','004','005'],['001','002','003'],['001']],
         [[],[],[],[]]
         [[],[],[],[]]];
 
-let answ = [[[],[121,180,,,],[,,],[]],
+let answ = [[[],[121,180,,,],[8,400,],[]],
         [[],[],[],[]],
         [[],[],[],[]],
         [[],[],[],[]],
@@ -43,9 +43,7 @@ function inputValueChange(){
     document.getElementById('number').value = null;
     if (ans==temp) {
         location.href = `main3.html?${32384029384}`;
-        console.log("정답코드 실행 예정");
     } else {
         location.href = `main3.html?${20110523234}`;
-        console.log("오답코드 실행 예정");
     }
 }
