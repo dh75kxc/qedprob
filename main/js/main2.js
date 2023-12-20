@@ -2,41 +2,15 @@ const receivedData = location.href.split('?')[1];
 const data1 = receivedData.split(',')[0];
 const data2 = receivedData.split(',')[1];
 
-function notify() {
-            if (Notification.permission !== 'granted') {
-                alert('notification is disabled');
-            }
-            else {
-                var notification = new Notification('Notification title', {
-                    icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-                    body: 'Notification text',
-                });
- 
-                notification.onclick = function () {
-                    window.open('http://google.com');
-                };
-            }
-        }
-
-window.onload = function () {
-    if (window.Notification) {
-        Notification.requestPermission();
-    }
-
-    setTimeout(function () {
-        notify();
-    }, 5000);
-}
-
 let image = [[['001','002'],['001','002','003','004'],['001','002','003','004'],['001','002']],
-            [[],[],[],[]],
+            [['001','002'],['001','002'],['001'],[]],
             [[],[],[],[]],
             [[],[],[],[]],
             [[],[],[],[]]
             [[],[],[],[]]];
 
 let answ = [[[1,12],[121,180,14,],[8,75,10,28],[540,400]],
-            [[],[],[],[]],
+            [[5,7],[324,673],[514],[]],
             [[],[],[],[]],
             [[],[],[],[]],
             [[],[],[],[]]
@@ -51,10 +25,14 @@ let ans = answ[data1][data2][randnum];
 let temp = 1234567890;
 
 let Byeongsin = 0;
-if (data2==3) {
+if (data2==1) {
+    Byeongsin = 240;
+} else if (data2==2) {
+    Byeongsin = 300;
+} else if (data2==3) {
     Byeongsin = 600;
 } else {
-    Byeongsin = 300;
+    Byeongsin = 120;
 }
 function msg_time() {
     m = Math.floor(Byeongsin / 60).toString().padStart(2,'0') + ":" + (Byeongsin % 60).toString().padStart(2,'0');
