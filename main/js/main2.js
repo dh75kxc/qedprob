@@ -42,7 +42,7 @@ function msg_time() {
     if (Byeongsin < 0) {	
         clearInterval(tid);
         alert("시간이 종료되었습니다.");
-        location.href = `index.html`;
+        location.href = `../index.html`;
     }
 }
 window.onload = function TimerStart(){tid=setInterval('msg_time()',1000)};
