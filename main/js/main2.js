@@ -67,3 +67,8 @@ function NotReload(){
     } 
 }
 document.onkeydown = NotReload;
+
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault();
+    event.returnValue = '';
+  });
