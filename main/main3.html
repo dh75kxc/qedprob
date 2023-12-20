@@ -2,15 +2,27 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=0.6" />
+        <meta name="viewport" content="width=device-width,initial-scale=0.7" />
         <title>길거리 수학</title>
         <script src="./js/main3.js" defer></script>
         <style>
+            #nvalue {
+                display: flex;
+                width: 100%;
+                margin-left: 40%;
+                text-align: center;
+                font-size: 200%;
+                margin-top: 16%;
+            }
+            #nvalue b{
+                text-align: center;
+                color: darkblue;
+            }
             #outer{
                 border: 10px solid aquamarine;
                 background-color: mintcream;
                 text-align: center;
-                margin-top: 25%;
+                margin-top: 2%;
             }
             #res{
                 text-align: center;
@@ -19,11 +31,39 @@
                 margin-top:5%;
                 font-size:800%;
             }
+            #rtrn{
+                text-align: center;
+                margin-left: 40%;
+                margin-top: 2%;
+                border: 5px solid skyblue;
+                background-color: rgba(0,0,0,0);
+                color: skyblue;
+                width:20%;
+                height:10%;
+                font-size:250%;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            #rtrn:hover{
+                color:white;
+                background-color: skyblue;
+            }
+
         </style>
     </head>
     <body>
+        <div id="nvalue">
+            <b id="subject">과목</b>
+            <b style="color:chartreuse">--/--</b>
+            <b id="difficulty">난이도</b>
+            <b style="color:chartreuse">--/--</b>
+            <b id="chips">획득 가능한 칩</b>
+        </div>
         <div id="outer">
             <b id="res"> result </b>
         </div>
+        <button id="rtrn" onclick="returnToHome()">돌아가기</button>
     </body>
 </html>
