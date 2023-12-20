@@ -28,14 +28,14 @@ window.onload = function () {
     }, 5000);
 }
 
-let image = [[['001'],['001','002','003','004','005'],['001','002'],['001']],
+let image = [[['001','002'],['001','002','003','004'],['001','002','003','004'],['001','002']],
             [[],[],[],[]],
             [[],[],[],[]],
             [[],[],[],[]],
             [[],[],[],[]]
             [[],[],[],[]]];
 
-let answ = [[[1],[121,180,14,,],[8,75],[,400]],
+let answ = [[[1,12],[121,180,14,],[8,75,10,28],[540,400]],
             [[],[],[],[]],
             [[],[],[],[]],
             [[],[],[],[]],
@@ -50,7 +50,12 @@ document.querySelector('.problem img').setAttribute('src', 'assets/'+data1+'/'+d
 let ans = answ[data1][data2][randnum];
 let temp = 1234567890;
 
-let Byeongsin = 300;
+let Byeongsin = 0;
+if (data2==3) {
+    Byeongsin = 600;
+} else {
+    Byeongsin = 300;
+}
 function msg_time() {
     m = Math.floor(Byeongsin / 60).toString().padStart(2,'0') + ":" + (Byeongsin % 60).toString().padStart(2,'0');
     document.querySelector('#timer').innerText = m;
