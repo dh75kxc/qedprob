@@ -12,6 +12,17 @@ document.querySelector('#probnum2').innerText = image[receivedData][1].length+" 
 document.querySelector('#probnum3').innerText = image[receivedData][2].length+" Problems";
 document.querySelector('#probnum4').innerText = image[receivedData][3].length+" Problems";
 
+if (receivedData < 3) {
+    document.querySelector('#price1').innerText = "2 coins";
+    document.querySelector('#price2').innerText = "3 coins";
+    document.querySelector('#price3').innerText = "5 coins";
+    document.querySelector('#price4').innerText = "10 coins";
+} else {
+    document.querySelector('#price1').innerText = "3 coins";
+    document.querySelector('#price2').innerText = "4 coins";
+    document.querySelector('#price3').innerText = "8 coins";
+    document.querySelector('#price4').innerText = "15 coins";
+}
 document.getElementById('test_btn1').addEventListener('click', () => {
     location.href = `main2.html?${receivedData},${0}`;
 });
