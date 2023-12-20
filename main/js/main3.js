@@ -12,7 +12,7 @@ if (data3 == 32384029384) {
         } else if (data2 == 2) {
             document.querySelector('#chips').innerText = 5;
         } else if (data2 == 3) {
-            document.querySelector('#chips').innerText = 10;
+            document.querySelector('#chips').innerText = 8;
         } else {
             document.querySelector('#chips').innerText = 2;
         }
@@ -22,7 +22,7 @@ if (data3 == 32384029384) {
         } else if (data2 == 2) {
             document.querySelector('#chips').innerText = 8;
         } else if (data2 == 3) {
-            document.querySelector('#chips').innerText = 15;
+            document.querySelector('#chips').innerText = 12;
         } else {
             document.querySelector('#chips').innerText = 3;
         }
@@ -66,7 +66,7 @@ if (data2 == 1) {
 document.querySelector('#').innerText = m;
 
 function returnToHome() {
-    alert("카운터가 당신의 결과를 확인하지 못한 채로 이 창이 닫힌다면 얻게 되는 칩을 얻지 못할 수 있습니다.");
+    alert("카운터가 결과를 확인하지 않은 채로 이 창을 닫을 경우, 칩 지급이 불가합니다.");
     setTimeout(function() {
         location.href = `../index.html`;
     }, 200);

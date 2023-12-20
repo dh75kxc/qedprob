@@ -1,11 +1,11 @@
 const receivedData = location.href.split('?')[1];
 
 let image = [[[1,2],[1,2,3,4],[1,2,3,4],[1,2]],
-            [[1,2,3],[1,2,3,4,5,6,7],[1,2,3,4,5,6],[1,2,3,4]],
+            [[1,2,3],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6],[1,2,3,4]],
             [[1,2],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4]],
             [[1,2,3,4],[1,2,3,4],[1,2,3,4,5],[1,2,3]],
             [[1,2,3,4],[1,2,3,4],[1,2,3],[1,2]],
-            [[],[1,2,3],[1,2],[]]];
+            [[1],[1,2,3,4],[1,2,3,4,5],[1,2,3]]];
 
 document.querySelector('#probnum1').innerText = image[receivedData][0].length+" Problems";
 document.querySelector('#probnum2').innerText = image[receivedData][1].length+" Problems";
@@ -13,15 +13,15 @@ document.querySelector('#probnum3').innerText = image[receivedData][2].length+" 
 document.querySelector('#probnum4').innerText = image[receivedData][3].length+" Problems";
 
 if (receivedData < 3) {
-    document.querySelector('#price1').innerText = "2 coins";
-    document.querySelector('#price2').innerText = "3 coins";
-    document.querySelector('#price3').innerText = "5 coins";
-    document.querySelector('#price4').innerText = "10 coins";
+    document.querySelector('#price1').innerText = "2 chips";
+    document.querySelector('#price2').innerText = "3 chips";
+    document.querySelector('#price3').innerText = "5 chips";
+    document.querySelector('#price4').innerText = "8 chips";
 } else {
-    document.querySelector('#price1').innerText = "3 coins";
-    document.querySelector('#price2').innerText = "4 coins";
-    document.querySelector('#price3').innerText = "8 coins";
-    document.querySelector('#price4').innerText = "15 coins";
+    document.querySelector('#price1').innerText = "3 chips";
+    document.querySelector('#price2').innerText = "4 chips";
+    document.querySelector('#price3').innerText = "8 chips";
+    document.querySelector('#price4').innerText = "12 chips";
 }
 document.getElementById('test_btn1').addEventListener('click', () => {
     location.href = `main2.html?${receivedData},${0}`;
